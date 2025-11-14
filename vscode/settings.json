@@ -33,10 +33,10 @@
   },
   "vim.useSystemClipboard": true,
   "vim.incsearch": true,
-  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.enable": false,
   "vim.autoSwitchInputMethod.defaultIM": "com.apple.inputmethod.Kotoeri.RomajiTyping.Roman",
-  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
-  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/macism",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/macism {im}",
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["j"], "after": ["g", "j"] },
     { "before": ["k"], "after": ["g", "k"] },
