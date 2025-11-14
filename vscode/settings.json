@@ -1,0 +1,59 @@
+{
+  "typescript.validate.enable": true,
+  "editor.fontSize": 17,
+  "editor.fontFamily": "Monaco",
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.1,
+  "workbench.hover.delay": 300,
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.editor.enablePreview": false,
+  "window.zoomLevel": -1,
+  "security.workspace.trust.untrustedFiles": "open",
+  "accessibility.signalOptions.volume": 0,
+  "editor.accessibilitySupport": "off",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "extensions.ignoreRecommendations": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+  "[tex]": {
+    "editor.wordWrap": "on"
+  },
+  "editor.detectIndentation": false,
+  "[latex]": { "editor.autoClosingBrackets": "never" },
+  "[markdown]": {
+    "editor.autoClosingBrackets": "never"
+  },
+  "vim.useSystemClipboard": true,
+  "vim.incsearch": true,
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.inputmethod.Kotoeri.RomajiTyping.Roman",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["j"], "after": ["g", "j"] },
+    { "before": ["k"], "after": ["g", "k"] },
+    { "before": ["H"], "after": ["^"] },
+    { "before": ["L"], "after": ["$"] }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["j"], "after": ["g", "j"] },
+    { "before": ["k"], "after": ["g", "k"] }
+  ],
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    { "before": ["j"], "after": ["g", "j"] },
+    { "before": ["k"], "after": ["g", "k"] }
+  ],
+  "extensions.experimental.affinity": {
+    "vscode.vim": 1
+  },
+  "errorLens.delay": 500,
+  "terminal.external.osxExec": "WezTerm.app"
+}

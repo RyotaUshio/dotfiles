@@ -1,4 +1,4 @@
-SUBDIRS = hsnips karabiner
+SUBDIRS = hsnips karabiner vscode
 
 .PHONY: install $(SUBDIRS)
 
