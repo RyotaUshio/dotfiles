@@ -1,0 +1,564 @@
+% \usepackage[utf8]{inputenc}
+% \usepackage{natbib}
+%\usepackage[dvipdfmx]{graphicx}
+% \usepackage[pdftex]{graphicx}
+%\usepackage[dvipdfmx]{color}
+%\usepackage[dvipdfmx]{xcolor}
+%\graphicspath{{./fig/}}
+% \usepackage{authblk}
+% \usepackage[group-separator={,}]{siunitx}
+
+% \usepackage[japanese]{babel}
+
+% 
+% \let\latexthesection\thesection
+% \renewcommand{\thesection}{\arabic{section}} % section番号からchapter番号を除外
+\usepackage{wrapfig}
+\usepackage{floatrow}
+\usepackage{graphicx}
+\usepackage{lipsum}
+%\usepackage{indentfirst}
+\usepackage[inline]{enumitem}
+%\setlist[description]{style=nextline}
+
+%\usepackage{nameref}
+% \usepackage{hyperref}
+% \usepackage{breakurl}
+% \usepackage{ulem}
+% \newcommand\redsout{\bgroup\markoverwith{\textcolor{red}{\rule[0.5ex]{2pt}{0.6pt}}}\ULon}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{algpseudocode}
+
+\usepackage{thmtools}
+\usepackage{thm-restate}
+\usepackage{cleveref}
+\crefformat{figure}{Fig.~#2#1#3}
+
+% \usepackage{pgf}
+
+\usepackage[euler]{textgreek}
+%\usepackage{textgreek}
+
+\usepackage{tcolorbox}
+
+% \usepackage{xurl}
+% \newcommand{\nishimori}{\textbf{（西森）}}
+% \newcommand{\nishi}{\nishimori}
+% \newcommand{\ota}{\textbf{（太田）}}
+% \newcommand{\sakurai}{\textbf{（櫻井）}}
+% \newcommand{\ushio}{\textbf{（牛尾）}}
+
+\DeclareMathOperator*{\argminmax}{\mathrm{arg}\,\mathrm{min}\,\mathrm{max}}
+\DeclareMathOperator*{\argmaxmin}{\mathrm{arg}\,\mathrm{max}\,\mathrm{min}}
+
+% \theoremstyle{definition}
+% \newtheorem{definition}{Definition}
+% \numberwithin{definition}{section}
+
+% \theoremstyle{theorem}
+% \newtheorem{theorem}{Theorem}
+% \numberwithin{theorem}{section}
+% \newtheorem{proposition}{Proposition}
+% \numberwithin{proposition}{section}
+% \newtheorem{lemma}{Lemma}
+% \numberwithin{lemma}{section}
+% \newtheorem{corollary}{Corollary}
+% \numberwithin{corollary}{section}
+
+\theoremstyle{definition}
+% \newtheorem{assumption}{Assumption}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+
+\theoremstyle{definition}
+\declaretheorem[name=Definition]{definition}
+\declaretheorem[name=Assumption]{assumption}
+\declaretheorem[name=Example]{example}
+
+\theoremstyle{plain}
+\declaretheorem[name=Theorem]{theorem}
+\declaretheorem[name=Proposition]{proposition}
+\declaretheorem[name=Lemma]{lemma}
+\declaretheorem[name=Corollary]{corollary}
+
+
+
+
+
+\theoremstyle{definition}
+\newtheorem*{example*}{Example}
+% \numberwithin{example}{subsection}
+
+
+% \theoremstyle{definition}
+% \newtheorem{lemma}{補題}
+% \newtheorem*{lemma*}{補題}
+% \numberwithin{lemma}{subsection}
+
+% \theoremstyle{definition}
+% \newtheorem{corollary}{系}
+% \newtheorem*{corollary*}{系}
+% \numberwithin{corollary}{subsection}
+% \newtheorem{theorem}{定理}
+% \newtheorem*{theorem*}{定理}
+% \numberwithin{theorem}{subsection}
+
+% \newenvironment{solution}{\renewcommand{\proofname}{\textbf{解答}}\begin{proof}}{\end{proof}}
+
+% \theoremstyle{definition}
+% \newtheorem{assumption}{仮定}
+% \newtheorem*{assumption*}{仮定}
+
+% \theoremstyle{remark}
+% \newtheorem*{remark}{\textbf{注}}
+% \newtheorem*{comment}{\textbf{コメント}}
+
+% \newtheorem{example}{\textbf{例}}
+% \newtheorem*{example*}{\textbf{例}}
+% \numberwithin{example}{subsection}
+
+% \renewcommand*{\proofname}{\textbf{証明}}
+
+
+\usepackage{mathrsfs}
+
+\newcommand{\at}[2]{\left.{#1}\right|_{#2}}
+
+\DeclarePairedDelimiterX{\inp}[2]{\langle}{\rangle}{#1, #2} % 内積
+\newcommand{\inv}[1]{{#1}^{-1}}
+\newcommand{\Span}{\mathrm{span}}
+
+\DeclareMathOperator*{\expectation}{\mathbb{E}}
+\newcommand{\E}[2][]{\expectation_{#1} \left[ {#2} \right]} % 期待値
+\newcommand{\empE}[2][]{\hat{\expectation}_{#1} \left[ {#2} \right]} % 経験分布に関する期待値
+\DeclareMathOperator*{\probability}{\mathbb{P}}
+\renewcommand{\P}[2][]{\probability_{#1} \left( {#2} \right)} % 確率
+\DeclareMathOperator*{\variance}{\mathrm{Var}}
+\newcommand{\Var}[2][]{\variance_{#1} \left[ {#2} \right]} % 分散
+\DeclareMathOperator*{\covariance}{\mathrm{Cov}}
+\newcommand{\Cov}[2][]{\covariance_{#1} \left[ {#2} \right]} % 分散
+\newcommand{\cov}[1]{\mathrm{cov}\paren{#1}} % 共分散行列
+
+\newcommand{\Esub}[2]{\mathbb{E}_{#1} \left[ {#2} \right]}
+\newcommand{\Varsub}[2]{\mathrm{Var}_{#1} \left[ {#2} \right]}
+
+\newcommand{\indic}[1]{\mathbbm{1}\left[{#1}\right]} % 指示関数
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}} 
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}} % 損失の空間
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}} % 開集合系
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}} 
+\newcommand{\cT}{\mathcal{T}} 
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+\newcommand{\fA}{\mathfrak{A}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\fC}{\mathfrak{C}}
+\newcommand{\fD}{\mathfrak{D}}
+\newcommand{\fE}{\mathfrak{E}}
+\newcommand{\fF}{\mathfrak{F}}
+\newcommand{\fG}{\mathfrak{G}}
+\newcommand{\fH}{\mathfrak{H}}
+\newcommand{\fI}{\mathfrak{I}}
+\newcommand{\fJ}{\mathfrak{J}}
+\newcommand{\fK}{\mathfrak{K}}
+\newcommand{\fL}{\mathfrak{L}}
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\fN}{\mathfrak{N}}
+\newcommand{\fO}{\mathfrak{O}}
+\newcommand{\fP}{\mathfrak{P}}
+\newcommand{\fQ}{\mathfrak{Q}}
+\newcommand{\fR}{\mathfrak{R}}
+\newcommand{\fS}{\mathfrak{S}}
+\newcommand{\fT}{\mathfrak{T}}
+\newcommand{\fU}{\mathfrak{U}}
+\newcommand{\fV}{\mathfrak{V}}
+\newcommand{\fW}{\mathfrak{W}}
+\newcommand{\fX}{\mathfrak{X}}
+\newcommand{\fY}{\mathfrak{Y}}
+\newcommand{\fZ}{\mathfrak{Z}}
+
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\rA}{\mathrm{A}}
+\newcommand{\rB}{\mathrm{B}}
+\newcommand{\rC}{\mathrm{C}}
+\newcommand{\rD}{\mathrm{D}}
+\newcommand{\rE}{\mathrm{E}}
+\newcommand{\rF}{\mathrm{F}}
+\newcommand{\rG}{\mathrm{G}}
+\newcommand{\rH}{\mathrm{H}}
+\newcommand{\rI}{\mathrm{I}}
+\newcommand{\rJ}{\mathrm{J}}
+\newcommand{\rK}{\mathrm{K}}
+\newcommand{\rL}{\mathrm{L}}
+\newcommand{\rM}{\mathrm{M}}
+\newcommand{\rN}{\mathrm{N}}
+\newcommand{\rO}{\mathrm{O}}
+\newcommand{\rP}{\mathrm{P}}
+\newcommand{\rQ}{\mathrm{Q}}
+\newcommand{\rR}{\mathrm{R}}
+\newcommand{\rS}{\mathrm{S}}
+\newcommand{\rT}{\mathrm{T}}
+\newcommand{\rU}{\mathrm{U}}
+\newcommand{\rV}{\mathrm{V}}
+\newcommand{\rW}{\mathrm{W}}
+\newcommand{\rX}{\mathrm{X}}
+\newcommand{\rY}{\mathrm{Y}}
+\newcommand{\rZ}{\mathrm{Z}}
+
+\newcommand{\bone}{\mathbf{1}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bK}{\mathbf{K}}
+
+\newcommand{\bmA}{\bm{A}}
+\newcommand{\bmB}{\bm{B}}
+\newcommand{\bmC}{\bm{C}}
+\newcommand{\bmD}{\bm{D}}
+\newcommand{\bmE}{\bm{E}}
+\newcommand{\bmF}{\bm{F}}
+\newcommand{\bmG}{\bm{G}}
+\newcommand{\bmH}{\bm{H}}
+\newcommand{\bmI}{\bm{I}}
+\newcommand{\bmJ}{\bm{J}}
+\newcommand{\bmK}{\bm{K}}
+\newcommand{\bmL}{\bm{L}}
+\newcommand{\bmM}{\bm{M}}
+\newcommand{\bmN}{\bm{N}}
+\newcommand{\bmO}{\bm{O}}
+\newcommand{\bmP}{\bm{P}}
+\newcommand{\bmQ}{\bm{Q}}
+\newcommand{\bmR}{\bm{R}}
+\newcommand{\bmS}{\bm{S}}
+\newcommand{\bmT}{\bm{T}}
+\newcommand{\bmU}{\bm{U}}
+\newcommand{\bmV}{\bm{V}}
+\newcommand{\bmW}{\bm{W}}
+\newcommand{\bmX}{\bm{X}}
+\newcommand{\bmY}{\bm{Y}}
+\newcommand{\bmZ}{\bm{Z}}
+\newcommand{\bma}{\bm{a}}
+\newcommand{\bmb}{\bm{b}}
+\newcommand{\bmc}{\bm{c}}
+\newcommand{\bmd}{\bm{d}}
+\newcommand{\bme}{\bm{e}}
+\newcommand{\bmf}{\bm{f}}
+\newcommand{\bmg}{\bm{g}}
+\newcommand{\bmh}{\bm{h}}
+\newcommand{\bmi}{\bm{i}}
+\newcommand{\bmj}{\bm{j}}
+\newcommand{\bmk}{\bm{k}}
+\newcommand{\bml}{\bm{l}}
+\newcommand{\bmm}{\bm{m}}
+\newcommand{\bmn}{\bm{n}}
+\newcommand{\bmo}{\bm{o}}
+\newcommand{\bmp}{\bm{p}}
+\newcommand{\bmq}{\bm{q}}
+\newcommand{\bmr}{\bm{r}}
+\newcommand{\bms}{\bm{s}}
+\newcommand{\bmt}{\bm{t}}
+\newcommand{\bmu}{\bm{u}}
+\newcommand{\bmv}{\bm{v}}
+\newcommand{\bmw}{\bm{w}}
+\newcommand{\bmx}{\bm{x}}
+\newcommand{\bmy}{\bm{y}}
+\newcommand{\bmz}{\bm{z}}
+\newcommand{\bmmu}{\bm{\mu}}
+\newcommand{\bmsigma}{\bm{\sigma}}
+\newcommand{\bmxi}{\bm{\xi}}
+
+\newcommand{\bfA}{\mathbf{A}}
+\newcommand{\bfB}{\mathbf{B}}
+\newcommand{\bfC}{\mathbf{C}}
+\newcommand{\bfD}{\mathbf{D}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfF}{\mathbf{F}}
+\newcommand{\bfG}{\mathbf{G}}
+\newcommand{\bfH}{\mathbf{H}}
+\newcommand{\bfI}{\mathbf{I}}
+\newcommand{\bfJ}{\mathbf{J}}
+\newcommand{\bfK}{\mathbf{K}}
+\newcommand{\bfL}{\mathbf{L}}
+\newcommand{\bfM}{\mathbf{M}}
+\newcommand{\bfN}{\mathbf{N}}
+\newcommand{\bfO}{\mathbf{O}}
+\newcommand{\bfP}{\mathbf{P}}
+\newcommand{\bfQ}{\mathbf{Q}}
+\newcommand{\bfR}{\mathbf{R}}
+\newcommand{\bfS}{\mathbf{S}}
+\newcommand{\bfT}{\mathbf{T}}
+\newcommand{\bfU}{\mathbf{U}}
+\newcommand{\bfV}{\mathbf{V}}
+\newcommand{\bfW}{\mathbf{W}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\newcommand{\bfa}{\mathbf{a}}
+\newcommand{\bfb}{\mathbf{b}}
+\newcommand{\bfc}{\mathbf{c}}
+\newcommand{\bfd}{\mathbf{d}}
+\newcommand{\bfe}{\mathbf{e}}
+\newcommand{\bff}{\mathbf{f}}
+\newcommand{\bfg}{\mathbf{g}}
+\newcommand{\bfh}{\mathbf{h}}
+\newcommand{\bfi}{\mathbf{i}}
+\newcommand{\bfj}{\mathbf{j}}
+\newcommand{\bfk}{\mathbf{k}}
+\newcommand{\bfl}{\mathbf{l}}
+\newcommand{\bfm}{\mathbf{m}}
+\newcommand{\bfn}{\mathbf{n}}
+\newcommand{\bfo}{\mathbf{o}}
+\newcommand{\bfp}{\mathbf{p}}
+\newcommand{\bfq}{\mathbf{q}}
+\newcommand{\bfr}{\mathbf{r}}
+\newcommand{\bfs}{\mathbf{s}}
+\newcommand{\bft}{\mathbf{t}}
+\newcommand{\bfu}{\mathbf{u}}
+\newcommand{\bfv}{\mathbf{v}}
+\newcommand{\bfw}{\mathbf{w}}
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\bfy}{\mathbf{y}}
+\newcommand{\bfz}{\mathbf{z}}
+
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\eR}{\overline{\R}}
+\newcommand{\eO}{\overline{\cO}}
+
+% \newcommand{\st}{\,\text{s.t.}\,}
+\newcommand{\st}{\,\mathrm{s.t.}\,}
+\newcommand{\iid}{\mathrm{i.i.d.}}
+
+\newcommand{\seq}[3][]{\set{#2}_{#3}^{#1}}
+\newcommand{\infseq}[3][1]{\seq[\infty]{#2}{{#3}={#1}}}
+\newcommand{\ninfseq}[2][1]{\seq[\infty]{#2}{n={#1}}}
+
+\newcommand{\infbigcup}[2][1]{\bigcup_{{#2}={#1}}^\infty}
+\newcommand{\ninfbigcup}[1][1]{\infbigcup[#1]{n}}
+
+\newcommand{\comp}[1]{\left.{#1}\right.^\mathrm{c}}
+\newcommand{\interior}[1]{\left.{#1}\right.^\mathrm{\circ}}
+\newcommand{\exterior}[1]{\left.{#1}\right.^\mathrm{e}}
+% \newcommand{\boundary}[1]{\left.{#1}\right.^\mathrm{f}}
+\newcommand{\boundary}[1]{\mathrm{bd}\paren{#1}}
+
+\newcommand{\pcomp}[1]{\left({#1}\right)^\mathrm{c}}
+\newcommand{\pinterior}[1]{\left({#1}\right)^\mathrm{\circ}}
+\newcommand{\pexterior}[1]{\left({#1}\right)^\mathrm{e}}
+\newcommand{\pboundary}[1]{\left({#1}\right)^\mathrm{f}}
+
+\newcommand{\relint}[1]{\mathrm{relint}\paren{#1}}
+\newcommand{\inter}[1]{\mathrm{int}\paren{#1}}
+\newcommand{\conv}[1]{\mathrm{conv}\paren{#1}}
+\newcommand{\aff}[1]{\mathrm{aff}\paren{#1}}
+\newcommand{\cone}[1]{\mathrm{cone}\paren{#1}}
+
+\newcommand{\dom}[1]{\mathrm{dom}\paren{#1}}
+\newcommand{\epi}[1]{\mathrm{epi}\paren{#1}}
+\newcommand{\slope}[1]{\mathrm{slope}\paren{#1}}
+
+%\renewcommand{\c}{{}^{\mathrm{c}}} % 補集合
+\newcommand{\cl}[1]{\mathrm{cl}\left({#1}\right)} % 閉包
+% \newcommand{\cl}[1]{\overline{#1}} % 閉包
+
+\newcommand{\vcdim}{\mathrm{VCdim}}
+
+\newcommand{\mynewline}{~\\\vspace{-5mm}}
+\newcommand{\lightfont}[1]{{\color{gray}{#1}}}
+
+\newcommand{\paren}[1]{\left({#1}\right)}
+\newcommand{\sqb}[1]{\left[{#1}\right]}
+
+\newcommand{\bothref}[1]{\ref{#1}（\nameref{#1}）}
+
+\newcommand{\cuz}[1]{\quad (\text{$\because$#1})}
+
+% \usepackage[verbose=true,letterpaper]{geometry}
+% \AtBeginDocument{
+%   \newgeometry{
+%     textheight=9in,
+%     textwidth=5.5in,
+%     top=1in,
+%     headheight=12pt,
+%     headsep=25pt,
+%     footskip=30pt
+%   }
+% }
+
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Configure the behaviour of level 1 entries
+% NOTE: we use the list counter "myitemsi"
+\setlist[enumerate, 1]
+{label=(\roman{enumi})
+%leftmargin=\parindent,
+%rightmargin=10pt
+}
+
+% Configure the behaviour of level 2 entries
+% NOTE: we use the list counter "myitemsii"
+\setlist[enumerate, 2]
+{label=(\alph{enumii})
+%leftmargin=15pt,
+%rightmargin=15pt
+}
+
+
+% \newlist{sectionenum}{enumerate}{1}
+% \setlist[sectionenum, 1]
+% {label=\thesection.\arabic{sectionenumi},
+% %leftmargin=\parindent,
+% %rightmargin=10pt
+% }
+
+% \newlist{alphenum}{enumerate}{1}
+% \setlist[alphenum, 1]
+% {label=(\alph{alphenumi})
+% %leftmargin=\parindent,
+% %rightmargin=10pt
+% }
+
+% \newlist{exercise}{enumerate}{1}
+% \setlist[exercise, 1]
+% {
+% label=\textbf{Exercise \thesection.\arabic{exercisei}},
+% leftmargin=\parindent,
+% %rightmargin=10pt
+% }
+
+% \usepackage{biblatex} %Imports biblatex package
+% \addbibresource{ref.bib} %Import the bibliography file
+
+\newcommand{\iidsim}[1][1.8]{
+  \mathrel{\overset{\iid}{\scalebox{#1}[1]{$\sim$}}}
+}
+
+\newcommand{\tpr}{\mathrm{TPR}}
+\newcommand{\tnr}{\mathrm{TNR}}
+\newcommand{\fpr}{\mathrm{FPR}}
+\newcommand{\fnr}{\mathrm{FNR}}
+\newcommand{\err}{\mathrm{Err}}
+\newcommand{\acc}{\mathrm{Acc}}
+\newcommand{\ber}{\mathrm{BER}}
+\newcommand{\auc}{\mathrm{AUC}}
+
+
+\newcommand{\tdot}{\text{.}}
+\newcommand{\tcom}{\text{,}}
+
+\newcommand{\mean}[1][n]{\frac{1}{n} \sum_{i=1}^{#1}}
+
+\newcommand{\minpi}{\underline{\theta}}
+
+\newcommand{\pnote}[1]{\quad \text{(#1)}}
+
+
+\newcommand{\phierr}{\phi_\err}
+\newcommand{\phiber}{\phi_\ber}
+\newcommand{\phiauc}{\phi_\auc}
+\newcommand{\psiber}{\psi_\ber}
+\newcommand{\psiauc}{\psi_\auc}
+\newcommand{\besterr}{\err^*}
+\newcommand{\bestber}{\ber^*}
+\newcommand{\bestauc}{\auc^*}
+\newcommand{\besterrhat}{\widehat{\besterr}}
+\newcommand{\bestberhat}{\widehat{\bestber}}
+\newcommand{\bestauchat}{\widehat{\bestauc}}
+
+\newcommand{\marginal}{\bbP_{\cX}}
+
+\newcommand{\diam}{\mathrm{diam}}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\ece}{\mathrm{ECE}}
+\newcommand{\iso}{\mathrm{iso}}
+\usepackage{booktabs}

@@ -1,0 +1,3 @@
+[submodule "hsnips"]
+	path = hsnips
+	url = https://github.com/RyotaUshio/hsnips-dev.git
